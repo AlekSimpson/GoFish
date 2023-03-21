@@ -9,16 +9,22 @@ public class Main {
     }
 
     public static void gameloop(Scanner scnr) {
+        clearScreen();
         while (true)  {
             System.out.println("--------------------------------------");
             System.out.println("Would you like to play a game or exit?");
             System.out.println("press p to play");
             System.out.println("press q to quit");
             String answer = scnr.nextLine();
-            if (answer.equals("q")) {
+
+            clearScreen();
+
+            if (answer.toUpperCase().equals("Q")) {
                 break;
-            }else if  (answer.equals("p")) {
+            }else if  (answer.toUpperCase().equals("P")) {
                 startGame(scnr);
+            }else {
+                System.out.println("That is not a valid option. Please try again.");
             }
         }
     }
@@ -66,10 +72,16 @@ public class Main {
         }
     }
 
+    // checks to see if the game should end yet
     public static boolean checkGameState(Deck deck) {
         if (deck.getStackCount() == 0) {
             return false;
         }
         return true;
+    }
+
+    public static void clearScreen() {
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
     }
 }
