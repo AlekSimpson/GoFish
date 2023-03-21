@@ -59,11 +59,14 @@ public class Main {
                     player.addToHand(cardsWon);
                 }
 
+                player.checkForFullSet();
+
                 player.isPlayersTurn = false;
                 opponent.isPlayersTurn = true;
                 whosTurn = "Opponent";
             }else if (opponent.isPlayersTurn) {
                 opponent.playTurn(player, deck);
+                opponent.checkForFullSet();
 
                 player.isPlayersTurn = true;
                 opponent.isPlayersTurn = false;

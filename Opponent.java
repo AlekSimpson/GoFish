@@ -11,16 +11,8 @@ public class Opponent extends Player {
 
     public ArrayList<Card> checkHandFor(String rank) {
         ArrayList<Card> matches = new ArrayList<Card>();
-        ArrayList<Card> removed = new ArrayList<Card>();
-        for (Card card : super.hand) {
-            if (card.getName().equals(rank)) {
-                matches.add(card);
-                removed.add(card);
-            }
-        }
-        for (Card r : removed) {
-            super.hand.remove(r);
-        }
+        //search for cards and find matches
+        moveCards(super.hand, matches, rank.toUpperCase());
 
         if (matches.size() == 0) {
             System.out.println("Go fish!");
@@ -60,16 +52,8 @@ public class Opponent extends Player {
             }
 
             if (answer.toUpperCase().equals("Y")) {
-                ArrayList<Card> removed = new ArrayList<Card>();
-                for (Card c : player.getHand()) {
-                    if (c.getName().equals(desired)) {
-                        super.hand.add(c);
-                        removed.add(c);
-                    }
-                }
-                for (Card r : removed) {
-                    player.hand.remove(r);
-                }
+                // search for desired card and move it to opponents hand
+                moveCards(player.getHand(), super.hand, desired);
                 break;
             }else if (answer.toUpperCase().equals("N")) {
                 super.draw(deck);
@@ -81,6 +65,7 @@ public class Opponent extends Player {
         }
     }
 
+    //NOTE: THIS FUNCTION IS BUGGED
     public boolean playerIsLying(String card, Player pl, boolean checkNoCase) {
         for (Card c : pl.getHand()) {
             if (checkNoCase) {

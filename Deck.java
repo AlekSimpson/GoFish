@@ -10,9 +10,7 @@ public class Deck {
         cards = new ArrayList<Card>();
         stack = new Stack<Card>();
         initCards();
-        shuffle();
-        shuffle();
-        shuffle();
+        shuffle(5);
         for (Card c : cards) {
             this.stack.add(c);
         }
@@ -29,20 +27,18 @@ public class Deck {
         }
     }
 
-    public void shuffle() {
+    public void shuffle(int amount) {
         Random rand = new Random();
 
-        for (int i = this.cards.size()-1; i > 0; i--){
-            int randIndex = rand.nextInt(i);
+        for (int j = 0; j < amount; j++) {
+            for (int i = this.cards.size()-1; i > 0; i--){
+                int randIndex = rand.nextInt(i);
 
-            Card temp = this.cards.get(i);
-            this.cards.set(i, this.cards.get(randIndex));
-            this.cards.set(randIndex, temp);
-        } 
-
-        //for (Card c : cards) {
-         //   this.stack.add(c);
-        //}
+                Card temp = this.cards.get(i);
+                this.cards.set(i, this.cards.get(randIndex));
+                this.cards.set(randIndex, temp);
+            } 
+        }
     }
 
     public Card draw() {
