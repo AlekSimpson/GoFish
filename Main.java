@@ -51,9 +51,16 @@ public class Main {
 
             if (player.isPlayersTurn) {
                 player.displayHand();
-                System.out.println("Do you have any...? (type desired rank)");
-                rank = scnr.nextLine();
-                ArrayList<Card> cardsWon = opponent.checkHandFor(rank);
+                while (true) {
+                    System.out.println("Do you have any...? (type desired rank)");
+                    rank = scnr.nextLine();
+                    if (!isValidRankToAskFor(player, rank)) {
+                        System.out.println("You cannot ask for a rank that you do not have in your hand.\nTry again.");
+                    }else {
+                        break;
+                    }
+                }
+               ArrayList<Card> cardsWon = opponent.checkHandFor(rank);
 
                 if (cardsWon.size() == 0) {
                     player.draw(deck);
@@ -78,6 +85,15 @@ public class Main {
         }
     }
 
+    public static boolean isValidRankToAskFor(Player player, String rank) {
+        for (Card card : player.getHand()) {
+            if (card.getName().equals(rank)) {
+                return true;
+            }
+        }
+        return false;
+    } 
+
     // checks to see if the game should end yet
     public static boolean checkGameState(Deck deck) {
         if (deck.getStackCount() == 0) {
@@ -98,7 +114,8 @@ public class Main {
             System.out.printf("Opponent hand count: %d\n", opp.getHand().size());
             System.out.printf("Amount left in deck: %d", deck.getStackCount());
         }
-        int entireLength = (player.getHand().size() * 7) + ((player.getHand().size() + 1)*1);
+        int size = (player.getHand().size() >= 10) ? 10 : player.getHand().size();
+        int entireLength = (size * 7) + ((size + 1)*1);
         // int textLength = (player.isPlayersTurn) ? 11 : 15;
         int textLength = (player.isPlayersTurn) ? 29 : 37;
 

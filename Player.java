@@ -35,21 +35,33 @@ public class Player {
          * |  *  |
          * |____K|
          */
-        for (Card card : hand) {
-            String str = (card.getName().equals("10")) ? " |%s---|" : " |%s----|";
-            System.out.printf(str, card.getName());
-        }
-        System.out.println();
-        for (Card card : hand) {
-            System.out.printf(" |  %s  |", suitsUnicode.get(card.getSuit()));
-        }
-        System.out.println();
-        for (Card card : hand) {
-            String str = (card.getName().equals("10")) ? " |___%s|" : " |____%s|";
-            System.out.printf(str, card.getName());
-        }
+        int startIdx = 0;
+        int amtDisplayed = (this.hand.size() <= 10) ? this.hand.size() : 10;
+        System.out.println(amtDisplayed);
+        while (true) {
+            for (int i = startIdx; i < amtDisplayed; i++) {
+                String str = (this.hand.get(i).getName().equals("10")) ? " |%s---|" : " |%s----|";
+                System.out.printf(str, this.hand.get(i).getName());
+            }
+            System.out.print("GETTING HERE");
+            System.out.println();
+            for (int i = startIdx; i < amtDisplayed; i++) {
+                System.out.printf(" |  %s  |", suitsUnicode.get(this.hand.get(i).getSuit()));
+            }
+            System.out.println();
+            for (int i = startIdx; i < amtDisplayed; i++) {
+                String str = (this.hand.get(i).getName().equals("10")) ? " |___%s|" : " |____%s|";
+                System.out.printf(str, this.hand.get(i).getName());
+            }
 
-        System.out.println();
+            System.out.println();
+
+            if (this.hand.size() - amtDisplayed <= 0) {
+                break;
+            }
+            amtDisplayed+=10;
+            startIdx+=10;
+        }
 
         // Draw bottom seperator
         int length = (hand.size() * 7) + ((hand.size() + 1)*1);
