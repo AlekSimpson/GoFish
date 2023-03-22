@@ -26,12 +26,34 @@ public class Player {
         return this.hand;
     }
 
+    public void displayHandPrototype() {
+        int index = 0;
+        boolean onTop = true;
+        boolean onMiddle = false;
+        boolean onBottom = false;
+        while (true) {
+            if (index >= this.hand.size()) { break; }
+            Card currCard = this.hand.get(index);
+
+            if (onTop) {
+                System.out.print(makeTop(currCard));
+                onTop = false;
+                onMiddle = true;
+            }else if (onMiddle) {
+                System.out.print(makeMiddle(currCard));
+                onMiddle = false;
+                onBottom = true;
+            }else if (onBottom) {
+                System.out.print(makeBottom(currCard));
+                onBottom = false;
+                onTop = true;
+                index++;
+            }
+        }
+        System.out.println();
+    }
+
     public void displayHand() {
-        Map<String, String> suitsUnicode = new HashMap<String,String>();
-        suitsUnicode.put("Spades", "\u2660");
-        suitsUnicode.put("Hearts", "\u2665");
-        suitsUnicode.put("Diamonds", "\u2666");
-        suitsUnicode.put("Clubs", "\u2663");
         /*
          * |K----|
          * |  *  |
@@ -44,22 +66,19 @@ public class Player {
 
         for (int i = 1; i <= rows; i++) {
             for (int j = start; j < end; j++) {
-                Card card = this.hand.get(j);
-                String str = (card.getName().equals("10")) ? " |%s---|" : " |%s----|";
-                System.out.printf(str, card.getName());
+                String str = makeTop(this.hand.get(j));
+                System.out.print(str);
             }
-            System.out.println();
+            // System.out.println();
             for (int j = start; j < end; j++) {
-                Card card = this.hand.get(j);
-                System.out.printf(" |  %s  |", suitsUnicode.get(card.getSuit()));
+                String str = makeMiddle(this.hand.get(j));
+                System.out.print(str);
             }
-            System.out.println();
+            // System.out.println();
             for (int j = start; j < end; j++) {
-                Card card = this.hand.get(j);
-                String str = (card.getName().equals("10")) ? " |___%s|" : " |____%s|";
-                System.out.printf(str, card.getName());
+                String str = makeBottom(this.hand.get(j));
+                System.out.print(str);
             }
-            System.out.println();
             //----
             start = end;
             end+=10;
@@ -73,6 +92,28 @@ public class Player {
         }
         
         System.out.println();
+    }
+
+    public String makeTop(Card card) {
+        String str = (card.getName().equals("10")) ? " |%s---|" : " |%s----|";
+        // return String.format(str+"\n", card.getName());
+        return String.format(str, card.getName());
+    }
+    public String makeMiddle(Card card) {
+        Map<String, String> suitsUnicode = new HashMap<String,String>();
+        suitsUnicode.put("Spades", "\u2660");
+        suitsUnicode.put("Hearts", "\u2665");
+        suitsUnicode.put("Diamonds", "\u2666");
+        suitsUnicode.put("Clubs", "\u2663");
+
+        String str = String.format(" |  %s  |", suitsUnicode.get(card.getSuit()));
+        // return str+"\n";
+        return str;
+    }
+    public String makeBottom(Card card) {
+        String str = (card.getName().equals("10")) ? " |___%s|" : " |____%s|";
+        // return String.format(str+"\n", card.getName());
+        return String.format(str, card.getName());
     }
 
     public void addToHand(ArrayList<Card> wonCards) {

@@ -51,7 +51,7 @@ public class Main {
             printTopBar(game, whosTurn);
 
             if (player.isPlayersTurn) {
-                player.displayHand();
+                player.displayHandPrototype();
                 while (true) {
                     System.out.println("Do you have any...? (type desired rank)");
                     rank = scnr.nextLine();
