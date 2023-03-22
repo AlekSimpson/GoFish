@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
+    static boolean debug = false;
     public static void main(String[] args) {
         Scanner scnr = new Scanner(System.in);
         gameloop(scnr);
@@ -46,7 +47,8 @@ public class Main {
         String rank = "ERROR";
         String whosTurn = "Your";
         while (checkGameState(deck)) {
-            System.out.printf("--- %s turn ---\n", whosTurn);
+            printTopBar(deck, opponent, player, whosTurn);
+
             if (player.isPlayersTurn) {
                 player.displayHand();
                 System.out.println("Do you have any...? (type desired rank)");
@@ -71,6 +73,7 @@ public class Main {
                 player.isPlayersTurn = true;
                 opponent.isPlayersTurn = false;
                 whosTurn = "Your";
+                clearScreen();
             }
         }
     }
@@ -86,5 +89,25 @@ public class Main {
     public static void clearScreen() {
         System.out.print("\033[H\033[2J");
         System.out.flush();
+    }
+
+    public static void printTopBar(Deck deck, Opponent opp, Player player, String whosTurn) {
+        if (debug) {
+            System.out.println("[DEBUG INFO]");
+            System.out.printf("Player hand count: %d\n", player.getHand().size());
+            System.out.printf("Opponent hand count: %d\n", opp.getHand().size());
+            System.out.printf("Amount left in deck: %d", deck.getStackCount());
+        }
+        int entireLength = (player.getHand().size() * 7) + ((player.getHand().size() + 1)*1);
+        // int textLength = (player.isPlayersTurn) ? 11 : 15;
+        int textLength = (player.isPlayersTurn) ? 29 : 37;
+
+        int length = (entireLength - textLength)/2;
+        for (int i = 0; i < length; i++) { System.out.print("-"); }
+        int points = (whosTurn.equals("Your")) ? player.getPoints() : opp.getPoints();
+        System.out.printf(" %s turn | %s points: %d ", whosTurn, whosTurn, points);
+        for (int i = 0; i < length; i++) { System.out.print("-"); }
+        System.out.println();
+
     }
 }

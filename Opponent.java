@@ -44,7 +44,7 @@ public class Opponent extends Player {
 
             // this checks if the player is lying
             boolean whichCase = answer.toUpperCase().equals("N");
-            boolean pl_lying = playerIsLying(answer, player, whichCase);
+            boolean pl_lying = playerIsLying(desired, player, whichCase);
 
             if (pl_lying) {
                 System.out.println("It is against the games rules to lie. Try again.");
@@ -65,19 +65,29 @@ public class Opponent extends Player {
         }
     }
 
-    //NOTE: THIS FUNCTION IS BUGGED
-    public boolean playerIsLying(String card, Player pl, boolean checkNoCase) {
-        for (Card c : pl.getHand()) {
-            if (checkNoCase) {
-                if (card.equals(c)) {
-                    return true;
-                }
-            }else {
-                if (card.equals(c)) {
-                    return false;
+    // checks if player is not lying about what cards they have in their hand
+    public boolean playerIsLying(String desired, Player pl, boolean playerSaidNo) {
+        // ask for card x -> pl says no  -> we expect no card x's in pl.hand
+        // ask for card x -> pl says yes -> we expect pl.hand to have at least one card x
+        boolean retVal = false;
+
+        if (playerSaidNo) {
+            for (Card c : pl.getHand()) {
+                if (c.getName().equals(desired)) {
+                    // player's hand does have desired card, but player answered no when asked if they had it
+                    retVal = true;
                 }
             }
-       }
-        return false;
+        }else { // player said yes
+            boolean doesHave = false;
+            for (Card c : pl.getHand()) {
+                if (c.getName().equals(desired)) {
+                    doesHave = true;
+                }
+            }
+            retVal = !doesHave;
+        }
+
+        return retVal;
     }
 }

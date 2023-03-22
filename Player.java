@@ -1,12 +1,11 @@
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
 public class Player {
     ArrayList<Card> hand;
-    ArrayList<ArrayList<Card>> sets;
+    int points;
     boolean isPlayersTurn;
     Scanner scnr;
 
@@ -37,13 +36,28 @@ public class Player {
          * |____K|
          */
         for (Card card : hand) {
-            System.out.printf("|%s----|\n", card.getName());
-            System.out.printf("|  %s  |\n", suitsUnicode.get(card.getSuit()));
-            System.out.printf("|____%s|\n", card.getName());
-            // System.out.printf("|  %s of %s   ", card.getName(), card.getSuit());
+            String str = (card.getName().equals("10")) ? " |%s---|" : " |%s----|";
+            System.out.printf(str, card.getName());
         }
         System.out.println();
-        System.out.println("-----------------------------");
+        for (Card card : hand) {
+            System.out.printf(" |  %s  |", suitsUnicode.get(card.getSuit()));
+        }
+        System.out.println();
+        for (Card card : hand) {
+            String str = (card.getName().equals("10")) ? " |___%s|" : " |____%s|";
+            System.out.printf(str, card.getName());
+        }
+
+        System.out.println();
+
+        // Draw bottom seperator
+        int length = (hand.size() * 7) + ((hand.size() + 1)*1);
+        for (int i = 0; i < length; i++) {
+            System.out.print("-");
+        }
+        
+        System.out.println();
     }
 
     public void addToHand(ArrayList<Card> wonCards) {
@@ -69,11 +83,12 @@ public class Player {
             ArrayList<Card> collected = collectedRanks.get(rank);
 
             if (collected.size() == 4) {
-                this.sets.add(collected);
-            }
+                System.out.println("[POINT EARNED]");
+                this.points++;
 
-            for (Card card : collected) {
-                this.hand.remove(card);
+                for (Card card : collected) {
+                    this.hand.remove(card);
+                }
             }
         }
    }
@@ -89,5 +104,9 @@ public class Player {
         for (Card r : removed) {
             iterList.remove(r);
         }
+    }
+
+    public int getPoints() {
+        return this.points;
     }
 }
