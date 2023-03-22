@@ -22,7 +22,7 @@ public class Opponent extends Player {
         return matches;
     }  
 
-    public void playTurn(Player player, Deck deck) {
+    public void playTurn(Game game) {
         ArrayList<Card> temp = super.hand;
         ArrayList<String> multiples = new ArrayList<String>(); 
 
@@ -44,7 +44,7 @@ public class Opponent extends Player {
 
             // this checks if the player is lying
             boolean whichCase = answer.toUpperCase().equals("N");
-            boolean pl_lying = playerIsLying(desired, player, whichCase);
+            boolean pl_lying = playerIsLying(desired, game.getPlayer(), whichCase);
 
             if (pl_lying) {
                 System.out.println("It is against the games rules to lie. Try again.");
@@ -53,10 +53,10 @@ public class Opponent extends Player {
 
             if (answer.toUpperCase().equals("Y")) {
                 // search for desired card and move it to opponents hand
-                moveCards(player.getHand(), super.hand, desired);
+                moveCards(game.getPlayer().getHand(), super.hand, desired);
                 break;
             }else if (answer.toUpperCase().equals("N")) {
-                super.draw(deck);
+                super.draw(game.getDeck(), false);
                 System.out.println("darn!");
                 break;
             }else {
@@ -73,6 +73,7 @@ public class Opponent extends Player {
 
         if (playerSaidNo) {
             for (Card c : pl.getHand()) {
+                System.out.printf("-- %s\n", c.getName());
                 if (c.getName().equals(desired)) {
                     // player's hand does have desired card, but player answered no when asked if they had it
                     retVal = true;

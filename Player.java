@@ -15,8 +15,10 @@ public class Player {
         this.scnr = scnr;
     }
 
-    public void draw(Deck deck) {
+    public void draw(Deck deck, boolean verbose) {
         Card card = deck.draw();
+        if (verbose)
+        System.out.printf("[DREW %s of %s]\n", card.getName(), card.getSuit());
         hand.add(card);
     }
 
@@ -35,36 +37,37 @@ public class Player {
          * |  *  |
          * |____K|
          */
-        int startIdx = 0;
-        int amtDisplayed = (this.hand.size() <= 10) ? this.hand.size() : 10;
-        System.out.println(amtDisplayed);
-        while (true) {
-            for (int i = startIdx; i < amtDisplayed; i++) {
-                String str = (this.hand.get(i).getName().equals("10")) ? " |%s---|" : " |%s----|";
-                System.out.printf(str, this.hand.get(i).getName());
-            }
-            System.out.print("GETTING HERE");
-            System.out.println();
-            for (int i = startIdx; i < amtDisplayed; i++) {
-                System.out.printf(" |  %s  |", suitsUnicode.get(this.hand.get(i).getSuit()));
-            }
-            System.out.println();
-            for (int i = startIdx; i < amtDisplayed; i++) {
-                String str = (this.hand.get(i).getName().equals("10")) ? " |___%s|" : " |____%s|";
-                System.out.printf(str, this.hand.get(i).getName());
-            }
 
-            System.out.println();
+        int rows = (int) Math.ceil(this.hand.size()/10.0);
+        int start = 0;
+        int end = (this.hand.size() > 10) ? 10 : this.hand.size();
 
-            if (this.hand.size() - amtDisplayed <= 0) {
-                break;
+        for (int i = 1; i <= rows; i++) {
+            for (int j = start; j < end; j++) {
+                Card card = this.hand.get(j);
+                String str = (card.getName().equals("10")) ? " |%s---|" : " |%s----|";
+                System.out.printf(str, card.getName());
             }
-            amtDisplayed+=10;
-            startIdx+=10;
+            System.out.println();
+            for (int j = start; j < end; j++) {
+                Card card = this.hand.get(j);
+                System.out.printf(" |  %s  |", suitsUnicode.get(card.getSuit()));
+            }
+            System.out.println();
+            for (int j = start; j < end; j++) {
+                Card card = this.hand.get(j);
+                String str = (card.getName().equals("10")) ? " |___%s|" : " |____%s|";
+                System.out.printf(str, card.getName());
+            }
+            System.out.println();
+            //----
+            start = end;
+            end+=10;
         }
 
         // Draw bottom seperator
-        int length = (hand.size() * 7) + ((hand.size() + 1)*1);
+        int len = (hand.size() * 7) + ((hand.size() + 1)*1)+1;
+        int length = (hand.size() <= 10) ? len : 81; 
         for (int i = 0; i < length; i++) {
             System.out.print("-");
         }
@@ -95,7 +98,7 @@ public class Player {
             ArrayList<Card> collected = collectedRanks.get(rank);
 
             if (collected.size() == 4) {
-                System.out.println("[POINT EARNED]");
+                System.out.printf("[POINT EARNED - FOUND 4: %s]\n", collected.get(0).getName());
                 this.points++;
 
                 for (Card card : collected) {

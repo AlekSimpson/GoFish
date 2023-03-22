@@ -35,19 +35,20 @@ public class Main {
         Deck deck = new Deck();
         Player player = new Player(true, scnr);
         Opponent opponent = new Opponent(false, scnr);
+        Game game = new Game(player, opponent, deck);
         // deal players in
         for (int i = 1; i <= 14; i++) {
             if (i % 2 == 0) {
-                player.draw(deck);
+                player.draw(deck, false);
             }else {
-                opponent.draw(deck);
+                opponent.draw(deck, false);
             }
         }
 
         String rank = "ERROR";
         String whosTurn = "Your";
         while (checkGameState(deck)) {
-            printTopBar(deck, opponent, player, whosTurn);
+            printTopBar(game, whosTurn);
 
             if (player.isPlayersTurn) {
                 player.displayHand();
@@ -63,7 +64,7 @@ public class Main {
                ArrayList<Card> cardsWon = opponent.checkHandFor(rank);
 
                 if (cardsWon.size() == 0) {
-                    player.draw(deck);
+                    player.draw(deck, true);
                 }else {
                     player.addToHand(cardsWon);
                 }
@@ -74,7 +75,7 @@ public class Main {
                 opponent.isPlayersTurn = true;
                 whosTurn = "Opponent";
             }else if (opponent.isPlayersTurn) {
-                opponent.playTurn(player, deck);
+                opponent.playTurn(game);
                 opponent.checkForFullSet();
 
                 player.isPlayersTurn = true;
@@ -87,7 +88,7 @@ public class Main {
 
     public static boolean isValidRankToAskFor(Player player, String rank) {
         for (Card card : player.getHand()) {
-            if (card.getName().equals(rank)) {
+            if (card.getName().equals(rank.toUpperCase())) {
                 return true;
             }
         }
@@ -107,21 +108,22 @@ public class Main {
         System.out.flush();
     }
 
-    public static void printTopBar(Deck deck, Opponent opp, Player player, String whosTurn) {
+    public static void printTopBar(Game game, String whosTurn) {
         if (debug) {
             System.out.println("[DEBUG INFO]");
-            System.out.printf("Player hand count: %d\n", player.getHand().size());
-            System.out.printf("Opponent hand count: %d\n", opp.getHand().size());
-            System.out.printf("Amount left in deck: %d", deck.getStackCount());
+            System.out.printf("Player hand count: %d\n", game.getPlayer().getHand().size());
+            System.out.printf("Opponent hand count: %d\n", game.getOpponent().getHand().size());
+            System.out.printf("Amount left in deck: %d", game.getDeck().getStackCount());
         }
-        int size = (player.getHand().size() >= 10) ? 10 : player.getHand().size();
+        int size = (game.getPlayer().getHand().size() >= 10) ? 10 : game.getPlayer().getHand().size();
         int entireLength = (size * 7) + ((size + 1)*1);
         // int textLength = (player.isPlayersTurn) ? 11 : 15;
-        int textLength = (player.isPlayersTurn) ? 29 : 37;
+        int textLength = (game.getPlayer().isPlayersTurn) ? 29 : 37;
 
         int length = (entireLength - textLength)/2;
+        length++;
         for (int i = 0; i < length; i++) { System.out.print("-"); }
-        int points = (whosTurn.equals("Your")) ? player.getPoints() : opp.getPoints();
+        int points = (whosTurn.equals("Your")) ? game.getPlayer().getPoints() : game.getOpponent().getPoints();
         System.out.printf(" %s turn | %s points: %d ", whosTurn, whosTurn, points);
         for (int i = 0; i < length; i++) { System.out.print("-"); }
         System.out.println();
