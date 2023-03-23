@@ -1,5 +1,7 @@
+import java.security.cert.CertPathBuilderException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
@@ -26,94 +28,72 @@ public class Player {
         return this.hand;
     }
 
-    public void displayHandPrototype() {
-        int index = 0;
-        boolean onTop = true;
-        boolean onMiddle = false;
-        boolean onBottom = false;
-        while (true) {
-            if (index >= this.hand.size()) { break; }
-            Card currCard = this.hand.get(index);
+    public void displayHand() {
+        //make sublists
+        ArrayList<ArrayList<Card>> rows = new ArrayList<ArrayList<Card>>();
 
-            if (onTop) {
-                System.out.print(makeTop(currCard));
-                onTop = false;
-                onMiddle = true;
-            }else if (onMiddle) {
-                System.out.print(makeMiddle(currCard));
-                onMiddle = false;
-                onBottom = true;
-            }else if (onBottom) {
-                System.out.print(makeBottom(currCard));
-                onBottom = false;
-                onTop = true;
-                index++;
-            }
+        int chunks = (int)Math.floor(this.hand.size() / 10);
+        chunks = (chunks == 0) ? 1 : chunks; 
+        int start = 0;
+        int end = (this.hand.size() < 10) ? this.hand.size() : 10;
+        for (int i = 0; i < chunks; i++) {
+            ArrayList<Card> row = new ArrayList<Card>(this.hand.subList(start, end));
+            rows.add(row);
+            start = end;
+            end+=10;
         }
+
+        if (this.hand.size() > 10) {
+            int amtRemaining = (this.hand.size() % 10);
+            end-=10;
+            start = (this.hand.size()-amtRemaining);
+            end = (end+amtRemaining);
+            ArrayList<Card> r = new ArrayList<Card>(this.hand.subList(start, end));
+            rows.add(r);
+        }
+
+        for (ArrayList<Card> row : rows) {
+            makeRow(row);
+        }
+
+        int size = (this.hand.size() >= 10) ? 10 : this.hand.size();
+        int entireLength = (size * 7) + ((size + 1)*1);
+        for (int i = 0; i < entireLength; i++) { System.out.print("-"); }
         System.out.println();
     }
 
-    public void displayHand() {
+    public void makeRow(ArrayList<Card> row) {
         /*
          * |K----|
          * |  *  |
          * |____K|
          */
 
-        int rows = (int) Math.ceil(this.hand.size()/10.0);
-        int start = 0;
-        int end = (this.hand.size() > 10) ? 10 : this.hand.size();
+        System.out.println(make(row, " |%s---|", " |%s----|"));
+        System.out.println(makeMiddle(row));
+        System.out.println(make(row, " |___%s|", " |____%s|"));
+    }
 
-        for (int i = 1; i <= rows; i++) {
-            for (int j = start; j < end; j++) {
-                String str = makeTop(this.hand.get(j));
-                System.out.print(str);
-            }
-            // System.out.println();
-            for (int j = start; j < end; j++) {
-                String str = makeMiddle(this.hand.get(j));
-                System.out.print(str);
-            }
-            // System.out.println();
-            for (int j = start; j < end; j++) {
-                String str = makeBottom(this.hand.get(j));
-                System.out.print(str);
-            }
-            //----
-            start = end;
-            end+=10;
+    public String make(ArrayList<Card> cards, String formOne, String formTwo) {
+        String total = "";
+        for (Card card : cards) {
+            String str = (card.getName().equals("10")) ? formOne : formTwo;
+            total+= String.format(str, card.getName());
+        }
+        return total;
+ 
+    }
+
+    public String makeMiddle(ArrayList<Card> cards) {
+        Map<String, String> suitsUnicode = Map.of("Spades", "\u2660", "Hearts", "\u2665", "Diamonds", "\u2666", "Clubs", "\u2663");
+        String total = "";
+
+        for (Card card : cards) {
+            String str = String.format(" |  %s  |", suitsUnicode.get(card.getSuit()));
+            total+=str;
         }
 
-        // Draw bottom seperator
-        int len = (hand.size() * 7) + ((hand.size() + 1)*1)+1;
-        int length = (hand.size() <= 10) ? len : 81; 
-        for (int i = 0; i < length; i++) {
-            System.out.print("-");
-        }
-        
-        System.out.println();
-    }
-
-    public String makeTop(Card card) {
-        String str = (card.getName().equals("10")) ? " |%s---|" : " |%s----|";
-        // return String.format(str+"\n", card.getName());
-        return String.format(str, card.getName());
-    }
-    public String makeMiddle(Card card) {
-        Map<String, String> suitsUnicode = new HashMap<String,String>();
-        suitsUnicode.put("Spades", "\u2660");
-        suitsUnicode.put("Hearts", "\u2665");
-        suitsUnicode.put("Diamonds", "\u2666");
-        suitsUnicode.put("Clubs", "\u2663");
-
-        String str = String.format(" |  %s  |", suitsUnicode.get(card.getSuit()));
-        // return str+"\n";
-        return str;
-    }
-    public String makeBottom(Card card) {
-        String str = (card.getName().equals("10")) ? " |___%s|" : " |____%s|";
-        // return String.format(str+"\n", card.getName());
-        return String.format(str, card.getName());
+        return total;
     }
 
     public void addToHand(ArrayList<Card> wonCards) {

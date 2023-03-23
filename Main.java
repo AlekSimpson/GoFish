@@ -36,14 +36,8 @@ public class Main {
         Player player = new Player(true, scnr);
         Opponent opponent = new Opponent(false, scnr);
         Game game = new Game(player, opponent, deck);
-        // deal players in
-        for (int i = 1; i <= 14; i++) {
-            if (i % 2 == 0) {
-                player.draw(deck, false);
-            }else {
-                opponent.draw(deck, false);
-            }
-        }
+        // deal players in 
+        dealPlayersIn(player, opponent, deck);
 
         String rank = "ERROR";
         String whosTurn = "Your";
@@ -51,7 +45,7 @@ public class Main {
             printTopBar(game, whosTurn);
 
             if (player.isPlayersTurn) {
-                player.displayHandPrototype();
+                player.displayHand();
                 while (true) {
                     System.out.println("Do you have any...? (type desired rank)");
                     rank = scnr.nextLine();
@@ -103,9 +97,22 @@ public class Main {
         return true;
     }
 
+    // clears the program output, similar to "clear" in unix based OS's
     public static void clearScreen() {
         System.out.print("\033[H\033[2J");
         System.out.flush();
+    }
+
+    // deals players in 
+    public static void dealPlayersIn(Player player, Opponent opponent, Deck deck) {
+        int dealAmt = 7;
+        for (int i = 1; i <= dealAmt*2; i++) {
+            if (i % 2 == 0) {
+                player.draw(deck, false);
+            }else {
+                opponent.draw(deck, false);
+            }
+        }
     }
 
     public static void printTopBar(Game game, String whosTurn) {

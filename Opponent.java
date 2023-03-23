@@ -73,7 +73,6 @@ public class Opponent extends Player {
 
         if (playerSaidNo) {
             for (Card c : pl.getHand()) {
-                System.out.printf("-- %s\n", c.getName());
                 if (c.getName().equals(desired)) {
                     // player's hand does have desired card, but player answered no when asked if they had it
                     retVal = true;
