@@ -45,16 +45,10 @@ public class Main {
             printTopBar(game, whosTurn);
 
             if (player.isPlayersTurn) {
-                player.displayHand();
-                while (true) {
-                    System.out.println("Do you have any...? (type desired rank)");
-                    rank = scnr.nextLine();
-                    if (!isValidRankToAskFor(player, rank)) {
-                        System.out.println("You cannot ask for a rank that you do not have in your hand.\nTry again.");
-                    }else {
-                        break;
-                    }
-                }
+               player.displayHand();
+               rank = getPlayerRequestedRank(scnr, player);
+               // collecting info for AI player to base decisions off of
+               opponent.addToNeeds(rank.toUpperCase());
                ArrayList<Card> cardsWon = opponent.checkHandFor(rank);
 
                 if (cardsWon.size() == 0) {
@@ -78,6 +72,20 @@ public class Main {
                 clearScreen();
             }
         }
+    }
+
+    public static String getPlayerRequestedRank(Scanner scnr, Player player) {
+        String rank = "";
+        while (true) {
+            System.out.println("Do you have any...? (type desired rank)");
+            rank = scnr.nextLine();
+            if (!isValidRankToAskFor(player, rank)) {
+                System.out.println("You cannot ask for a rank that you do not have in your hand.\nTry again.");
+            }else {
+                break;
+            }
+        }
+        return rank;
     }
 
     public static boolean isValidRankToAskFor(Player player, String rank) {
