@@ -1,12 +1,15 @@
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Opponent extends Player {
     ArrayList<String> playerNeeds;
+    ArrayList<String> books;
 
     public Opponent(boolean isTurn, Scanner scnr) {
         super(isTurn, scnr);
         this.playerNeeds = new ArrayList<String>();
+        this.books = new ArrayList<String>();
     }
 
     public ArrayList<Card> checkHandFor(String rank) {
@@ -23,20 +26,36 @@ public class Opponent extends Player {
     }  
 
     public void playTurn(Game game) {
+        //System.out.println("=======================");
+        //this.displayHand();
+        //System.out.println("=======================");
         // first check if opponent has anything the player needs
-        String highPriority = checkPlayerNeeded();
+        String playerNeeds = checkPlayerNeeded();
         // find which ranks opponent has the most 
-        ArrayList<String> multiples = findMostCommonRanks();
+        getBooks();
         // find highest priority
-        String highestPriority = "";
-        if (multiples.size() == 0) {
-            highestPriority = findHighestPriorityAsk(highPriority, multiples);
+        String desired = "";
+        if (this.books.size() > 0) {
+            System.out.println("----CHOOSING FIRST FROM BOOKS----");
+            desired = this.books.get(0);
         }else {
-            highestPriority = this.hand.get(0).getName();
+            System.out.println("----CHOOSING RANDOM CARD----");
+            Random rnd = new Random();
+            int randomIdx = rnd.nextInt(this.hand.size());
+            desired = this.hand.get(randomIdx).getName();
+        }
+        boolean askPlayerNeeds = false;
+        // checks if opponent can ask for card player previously asked for
+        for (Card card : this.hand) {
+            if (card.getName().equals(playerNeeds)) { 
+                System.out.println("----CHOOSING FROM PLAYER NEEDS----");
+                desired = playerNeeds;
+                askPlayerNeeds = true;
+                break; 
+            }
         }
 
-        String desired = highestPriority;
-        System.out.printf("HIGHEST PRIORITY IS: %s\n", highestPriority);
+        System.out.printf("HIGHEST PRIORITY IS: %s\n", desired);
         while (true) {
             System.out.printf("Do you have any %s's? (y/n)\n", desired);
             String answer = super.scnr.nextLine();
@@ -53,28 +72,27 @@ public class Opponent extends Player {
             if (answer.toUpperCase().equals("Y")) {
                 // search for desired card and move it to opponents hand
                 moveCards(game.getPlayer().getHand(), super.hand, desired);
+                if (askPlayerNeeds) { this.playerNeeds.remove(0); }
                 break;
             }else if (answer.toUpperCase().equals("N")) {
                 super.draw(game.getDeck(), false);
-                System.out.println("darn!");
                 break;
             }else {
                 System.out.println("Your answer is not valid, try again");
             }
         }
-    }
-
-    public String findHighestPriorityAsk(String string, ArrayList<String> multiples) {
-        for (String str : multiples) {
-            if (string.equals(str)) {
-                return string;
-            }
+        if (this.books.size() > 1) {
+            System.out.println("running");
+            String tmp = this.books.get(0);                
+            this.books.remove(0);
+            this.books.add(tmp);
         }
-        return multiples.get(0);
+ 
     }
 
     public String checkPlayerNeeded() {
         ArrayList<String> highPriority = new ArrayList<String>();
+        if (this.playerNeeds.size() == 0) { return ""; }
         for (String needs: this.playerNeeds) {
             for (Card card : this.hand) {
                 if (card.getName().equals(needs)) {
@@ -82,27 +100,28 @@ public class Opponent extends Player {
                 }
             }
         }
+        if (highPriority.size() == 0) { return ""; }
         return highPriority.get(0);
-   }
-
-   public void addToNeeds(String rank) {
-       this.playerNeeds.add(rank);
-   }
-
-    // find which ranks opponent has the most 
-    public ArrayList<String> findMostCommonRanks() {
-        ArrayList<Card> temp = super.hand;
-        ArrayList<String> multiples = new ArrayList<String>(); 
-        for (Card card : temp) {
-            for (Card c : temp) {
-                if (card.getName().equals(c.getName()) && !multiples.contains(card.getName())) {
-                    multiples.add(card.getName());
-                }
-            }
-        }
-        return multiples;
     }
 
+    // find which ranks opponent has the most 
+    public void getBooks() {
+        String[] ranks = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"};
+        ArrayList<String> currRanks = new ArrayList<String>();
+        for (Card card : this.hand) { currRanks.add(card.getName()); }
+        for (String rank : ranks) {
+            int firstIdx = currRanks.indexOf(rank);
+            int secondIdx = currRanks.lastIndexOf(rank);
+            if (firstIdx != secondIdx) {
+                this.books.add(rank);
+            }
+        }
+    }
+    public void addToNeeds(String rank) {
+        if (!this.playerNeeds.contains(rank)) {
+            this.playerNeeds.add(rank);
+        }
+    }
     // checks if player is not lying about what cards they have in their hand
     public boolean playerIsLying(String desired, Player pl, boolean playerSaidNo) {
         // ask for card x -> pl says no  -> we expect no card x's in pl.hand
