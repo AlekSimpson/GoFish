@@ -57,6 +57,7 @@ public class Main {
                     player.addToHand(cardsWon);
                 }
 
+                // checks if player has any full books
                 player.checkForFullSet();
 
                 player.isPlayersTurn = false;
@@ -64,6 +65,7 @@ public class Main {
                 whosTurn = "Opponent";
             }else if (opponent.isPlayersTurn) {
                 opponent.playTurn(game);
+                // checks if it has any full books
                 opponent.checkForFullSet();
 
                 player.isPlayersTurn = true;
@@ -139,9 +141,8 @@ public class Main {
         length++;
         for (int i = 0; i < length; i++) { System.out.print("-"); }
         int points = (whosTurn.equals("Your")) ? game.getPlayer().getPoints() : game.getOpponent().getPoints();
-        System.out.printf(" %s turn | %s points: %d ", whosTurn, whosTurn, points);
+        System.out.printf(" %s turn | %s points: %d | %d left in deck", whosTurn, whosTurn, points, game.getDeck().getDeckSize());
         for (int i = 0; i < length; i++) { System.out.print("-"); }
         System.out.println();
-
     }
 }

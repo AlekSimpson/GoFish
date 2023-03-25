@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class Player {
     ArrayList<Card> hand;
@@ -142,5 +143,10 @@ public class Player {
 
     public int getPoints() {
         return this.points;
+    }
+
+    public static int getRandomNumber(int min, int max) {
+        int randomNum = ThreadLocalRandom.current().nextInt(min, max + 1);
+        return randomNum;
     }
 }

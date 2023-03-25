@@ -48,4 +48,8 @@ public class Deck {
     public int getStackCount() {
         return this.stack.size();
     }
+
+    public int getDeckSize() {
+        return this.stack.size();
+    }
 }
