@@ -1,0 +1,1763 @@
+!SESSION 2023-03-25 10:27:18.953 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=17.0.1
+java.vendor=Azul Systems, Inc.
+BootLoader constants: OS=macosx, ARCH=aarch64, WS=cocoa, NL=en_US
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 10:27:19.601
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is started
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 10:27:19.681
+!MESSAGE Main thread is waiting
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 10:27:19.696
+!MESSAGE >> initialize
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 10:27:19.696
+!MESSAGE Initializing Java Language Server 1.9.0.202203031534
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 10:27:19.702
+!MESSAGE Static Commands: []
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 10:27:19.702
+!MESSAGE Non-Static Commands: [java.edit.organizeImports, java.project.refreshDiagnostics, java.project.import, java.navigate.openTypeHierarchy, java.project.removeFromSourcePath, java.project.listSourcePaths, java.project.resolveStackTraceLocation, java.project.getAll, java.project.isTestFile, java.project.getClasspaths, java.navigate.resolveTypeHierarchy, java.edit.stringFormatting, java.project.getSettings, java.project.updateSourceAttachment, java.project.upgradeGradle, java.project.resolveSourceAttachment, java.project.addToSourcePath]
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 10:27:19.705
+!MESSAGE Wait for AutoBuildOffJob start
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 10:27:19.706
+!MESSAGE Wait for AutoBuildOffJob end 1ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 10:27:19.706
+!MESSAGE Starting org.eclipse.m2e.core
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 10:27:19.706
+!MESSAGE Started org.eclipse.m2e.core 0ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 10:27:19.706
+!MESSAGE ProjectRegistryRefreshJob finished 0ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 10:27:19.707
+!MESSAGE Starting org.eclipse.buildship.core
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 10:27:19.714
+!MESSAGE Started org.eclipse.buildship.core 6ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 10:27:19.727
+!MESSAGE LoadingGradleVersionJob finished 12ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 10:27:19.734
+!MESSAGE >> initialized
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 10:27:19.735
+!MESSAGE Creating the Java project jdt.ls-java-project
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 10:27:19.834
+!MESSAGE Default VM Install changed from  null to com.azul.zulu.jdk-/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 10:27:19.835
+!MESSAGE defaultVMInstallChanged -> force update of jdt.ls-java-project
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 10:27:19.851
+!MESSAGE Finished creating the Java project jdt.ls-java-project
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 10:27:20.045
+!MESSAGE Workspace initialized in 318ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 10:27:20.072
+!MESSAGE >> initialization job finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 10:27:20.073
+!MESSAGE >> workspace/didChangeConfiguration
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 10:27:20.081
+!MESSAGE >> New configuration: {java=[]}
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 10:27:20.081
+!MESSAGE >> workspace/didChangeConfiguration
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 10:27:20.082
+!MESSAGE >> New configuration: {java=[]}
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 10:27:20.083
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 10:27:20.162
+!MESSAGE >> build jobs finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 10:27:20.163
+!MESSAGE >> registerWatchers'
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 10:27:20.163
+!MESSAGE >> watchers registered
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 10:27:20.309
+!MESSAGE >> document/documentSymbol
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 10:27:20.577
+!MESSAGE Reconciled 1. Took 0 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 10:27:21.066
+!MESSAGE begin problem for /Card.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 10:27:21.066
+!MESSAGE 1 problems reported for /Card.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 10:27:21.068
+!MESSAGE Validated 1. Took 85 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 10:27:35.619
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 10:27:35.648
+!MESSAGE Reconciled 1. Took 0 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 10:27:35.673
+!MESSAGE >> document/documentSymbol
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 10:27:35.673
+!MESSAGE >> document/documentSymbol
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 10:27:36.067
+!MESSAGE begin problem for /Card.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 10:27:36.067
+!MESSAGE 1 problems reported for /Card.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 10:27:36.092
+!MESSAGE begin problem for /Opponent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 10:27:36.092
+!MESSAGE 1 problems reported for /Opponent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 10:27:36.092
+!MESSAGE Validated 2. Took 39 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 10:27:45.379
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 10:28:15.702
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 10:28:47.401
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 10:30:12.056
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:39.065
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:39.082
+!MESSAGE Reconciled 1. Took 4 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:39.511
+!MESSAGE begin problem for /Card.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:39.512
+!MESSAGE 1 problems reported for /Card.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:39.535
+!MESSAGE begin problem for /Opponent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:39.535
+!MESSAGE 1 problems reported for /Opponent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:39.535
+!MESSAGE Validated 2. Took 46 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:39.737
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:39.747
+!MESSAGE Reconciled 1. Took 3 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:40.171
+!MESSAGE begin problem for /Card.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:40.172
+!MESSAGE 1 problems reported for /Card.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:40.190
+!MESSAGE begin problem for /Opponent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:40.190
+!MESSAGE 1 problems reported for /Opponent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:40.190
+!MESSAGE Validated 2. Took 36 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:40.380
+!MESSAGE >> document/didSave
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:41.123
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:41.132
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:41.511
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:41.515
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:41.519
+!MESSAGE Reconciled 1. Took 2 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:41.531
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:41.818
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:41.829
+!MESSAGE Reconciled 1. Took 4 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:41.966
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:41.980
+!MESSAGE Reconciled 1. Took 8 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:42.111
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:42.113
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:42.114
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:42.118
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:42.311
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:42.314
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:42.332
+!MESSAGE Reconciled 1. Took 6 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:42.417
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:42.478
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:42.480
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:42.488
+!MESSAGE Reconciled 1. Took 4 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:42.519
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:42.666
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:42.673
+!MESSAGE Reconciled 1. Took 2 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:42.779
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:42.781
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:42.781
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:42.841
+!MESSAGE Reconciled 1. Took 2 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:43.037
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:43.048
+!MESSAGE Reconciled 1. Took 3 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:43.183
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:43.253
+!MESSAGE Reconciled 1. Took 8 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:43.630
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:43.633
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:43.642
+!MESSAGE Reconciled 1. Took 6 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:43.679
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:43.921
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:43.924
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:43.933
+!MESSAGE Reconciled 1. Took 5 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:43.959
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:44.071
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:44.134
+!MESSAGE Reconciled 1. Took 2 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:44.329
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:44.340
+!MESSAGE Reconciled 1. Took 3 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:44.480
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:44.488
+!MESSAGE Reconciled 1. Took 2 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:44.632
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:44.693
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:44.774
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:44.776
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:44.781
+!MESSAGE Reconciled 1. Took 2 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:44.811
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:45.201
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:45.211
+!MESSAGE begin problem for /Card.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:45.211
+!MESSAGE 1 problems reported for /Card.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:45.236
+!MESSAGE begin problem for /Opponent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:45.236
+!MESSAGE 3 problems reported for /Opponent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:45.236
+!MESSAGE Validated 2. Took 49 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:45.238
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:45.263
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:45.296
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:45.351
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:45.357
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:45.502
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:45.509
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:45.817
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:45.823
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:45.824
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:45.884
+!MESSAGE Reconciled 1. Took 3 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:45.965
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:45.971
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:46.258
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:46.265
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:46.266
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:46.271
+!MESSAGE Reconciled 1. Took 2 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:46.401
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:46.404
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:46.410
+!MESSAGE Reconciled 1. Took 2 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:46.422
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:46.428
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:46.430
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:46.431
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:46.435
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:46.598
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:46.600
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:46.606
+!MESSAGE Reconciled 1. Took 2 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:46.607
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:47.027
+!MESSAGE begin problem for /Card.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:47.028
+!MESSAGE 1 problems reported for /Card.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:47.048
+!MESSAGE begin problem for /Opponent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:47.048
+!MESSAGE 2 problems reported for /Opponent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:47.048
+!MESSAGE Validated 2. Took 36 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:47.307
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:47.318
+!MESSAGE Reconciled 1. Took 3 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:47.740
+!MESSAGE begin problem for /Card.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:47.740
+!MESSAGE 1 problems reported for /Card.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:47.758
+!MESSAGE begin problem for /Opponent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:47.758
+!MESSAGE 2 problems reported for /Opponent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:47.758
+!MESSAGE Validated 2. Took 35 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:48.667
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:48.733
+!MESSAGE Reconciled 1. Took 4 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:48.813
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:48.815
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:48.816
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:48.820
+!MESSAGE Reconciled 1. Took 2 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:48.957
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:48.960
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:48.964
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:48.976
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:49.116
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:49.178
+!MESSAGE Reconciled 1. Took 2 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:49.280
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:49.287
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:49.434
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:49.442
+!MESSAGE Reconciled 1. Took 2 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:49.586
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:49.594
+!MESSAGE Reconciled 1. Took 2 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:49.796
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:49.798
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:49.804
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:49.838
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:50.183
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:50.188
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:50.193
+!MESSAGE Reconciled 1. Took 2 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:50.223
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:50.235
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:50.237
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:50.241
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:50.257
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:50.385
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:50.443
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:50.515
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:50.516
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:50.517
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:50.565
+!MESSAGE Reconciled 1. Took 2 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:50.624
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:50.626
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:50.629
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:50.631
+!MESSAGE Reconciled 1. Took 2 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:51.045
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:51.055
+!MESSAGE begin problem for /Card.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:51.056
+!MESSAGE 1 problems reported for /Card.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:51.073
+!MESSAGE begin problem for /Opponent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:51.074
+!MESSAGE 2 problems reported for /Opponent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:51.074
+!MESSAGE Validated 2. Took 38 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:51.080
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:51.194
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:51.201
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:51.267
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:51.268
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:51.269
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:51.273
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:51.695
+!MESSAGE begin problem for /Card.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:51.695
+!MESSAGE 1 problems reported for /Card.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:51.710
+!MESSAGE begin problem for /Opponent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:51.710
+!MESSAGE 2 problems reported for /Opponent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:51.710
+!MESSAGE Validated 2. Took 26 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:51.815
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:51.822
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:51.863
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:51.864
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:51.865
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:51.869
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:52.289
+!MESSAGE begin problem for /Card.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:52.290
+!MESSAGE 1 problems reported for /Card.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:52.307
+!MESSAGE begin problem for /Opponent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:52.307
+!MESSAGE 2 problems reported for /Opponent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:52.307
+!MESSAGE Validated 2. Took 34 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:52.674
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:52.677
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:52.683
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:52.715
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:52.754
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:52.756
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:52.766
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:52.815
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:52.905
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:52.911
+!MESSAGE Reconciled 1. Took 0 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:53.003
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:53.005
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:53.010
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:53.023
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:53.433
+!MESSAGE begin problem for /Card.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:53.434
+!MESSAGE 1 problems reported for /Card.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:53.452
+!MESSAGE begin problem for /Opponent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:53.452
+!MESSAGE 2 problems reported for /Opponent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:53.452
+!MESSAGE Validated 2. Took 37 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:54.162
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:54.174
+!MESSAGE Reconciled 1. Took 3 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:54.318
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:54.324
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:54.470
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:54.476
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:54.896
+!MESSAGE begin problem for /Card.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:54.897
+!MESSAGE 1 problems reported for /Card.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:54.911
+!MESSAGE begin problem for /Opponent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:54.911
+!MESSAGE 1 problems reported for /Opponent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:54.912
+!MESSAGE Validated 2. Took 30 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:56.527
+!MESSAGE >> document/resolveCompletionItem
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:56.721
+!MESSAGE >> document/resolveCompletionItem
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:57.084
+!MESSAGE >> document/resolveCompletionItem
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:57.207
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:57.214
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:57.359
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:57.369
+!MESSAGE Reconciled 1. Took 2 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:57.789
+!MESSAGE begin problem for /Card.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:57.790
+!MESSAGE 1 problems reported for /Card.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:57.803
+!MESSAGE begin problem for /Opponent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:57.804
+!MESSAGE 1 problems reported for /Opponent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:57.804
+!MESSAGE Validated 2. Took 30 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:58.448
+!MESSAGE >> document/documentSymbol
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:59.083
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:59.088
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:59.090
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:59.093
+!MESSAGE Reconciled 1. Took 2 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:59.350
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:59.362
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:59.369
+!MESSAGE Reconciled 1. Took 11 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:59.371
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:59.371
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:59.430
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:59.852
+!MESSAGE begin problem for /Card.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:59.853
+!MESSAGE 1 problems reported for /Card.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:59.862
+!MESSAGE begin problem for /Opponent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:59.862
+!MESSAGE 1 problems reported for /Opponent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:26:59.863
+!MESSAGE Validated 2. Took 27 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:01.210
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:01.216
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:01.217
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:01.219
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:01.643
+!MESSAGE begin problem for /Card.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:01.643
+!MESSAGE 1 problems reported for /Card.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:01.655
+!MESSAGE begin problem for /Opponent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:01.655
+!MESSAGE 1 problems reported for /Opponent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:01.655
+!MESSAGE Validated 2. Took 30 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:02.080
+!MESSAGE >> document/documentSymbol
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:02.593
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:02.603
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:02.736
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:02.744
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:02.832
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:02.834
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:02.835
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:02.891
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:03.311
+!MESSAGE begin problem for /Card.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:03.312
+!MESSAGE 1 problems reported for /Card.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:03.324
+!MESSAGE begin problem for /Opponent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:03.324
+!MESSAGE 1 problems reported for /Opponent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:03.325
+!MESSAGE Validated 2. Took 28 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:03.755
+!MESSAGE >> document/documentSymbol
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:04.788
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:04.795
+!MESSAGE Reconciled 1. Took 0 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:05.163
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:05.201
+!MESSAGE Reconciled 1. Took 0 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:05.364
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:05.371
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:05.510
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:05.518
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:05.935
+!MESSAGE begin problem for /Card.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:05.935
+!MESSAGE 1 problems reported for /Card.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:05.948
+!MESSAGE begin problem for /Opponent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:05.948
+!MESSAGE 1 problems reported for /Opponent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:05.949
+!MESSAGE Validated 2. Took 27 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:06.205
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:06.208
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:06.214
+!MESSAGE Reconciled 1. Took 3 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:06.242
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:06.267
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:06.268
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:06.279
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:06.328
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:06.417
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:06.423
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:06.578
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:06.585
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:06.730
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:06.737
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:06.896
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:06.903
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:07.054
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:07.056
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:07.057
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:07.117
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:07.540
+!MESSAGE begin problem for /Card.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:07.541
+!MESSAGE 1 problems reported for /Card.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:07.554
+!MESSAGE begin problem for /Opponent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:07.554
+!MESSAGE 1 problems reported for /Opponent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:07.555
+!MESSAGE Validated 2. Took 32 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:08.080
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:08.083
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:08.087
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:08.113
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:08.369
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:08.371
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:08.403
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:08.427
+!MESSAGE Reconciled 1. Took 0 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:08.461
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:08.462
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:08.467
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:08.471
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:08.612
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:08.619
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:08.745
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:08.747
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:08.752
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:08.776
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:08.947
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:08.954
+!MESSAGE Reconciled 1. Took 2 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:09.097
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:09.103
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:09.244
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:09.246
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:09.264
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:09.305
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:09.462
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:09.469
+!MESSAGE Reconciled 1. Took 2 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:09.614
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:09.676
+!MESSAGE Reconciled 1. Took 2 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:09.765
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:09.771
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:09.914
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:09.920
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:10.337
+!MESSAGE begin problem for /Card.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:10.337
+!MESSAGE 1 problems reported for /Card.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:10.354
+!MESSAGE begin problem for /Opponent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:10.355
+!MESSAGE 3 problems reported for /Opponent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:10.355
+!MESSAGE Validated 2. Took 33 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:10.817
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:10.827
+!MESSAGE Reconciled 1. Took 2 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:11.136
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:11.146
+!MESSAGE Reconciled 1. Took 3 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:11.284
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:11.291
+!MESSAGE Reconciled 1. Took 2 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:11.710
+!MESSAGE begin problem for /Card.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:11.710
+!MESSAGE 1 problems reported for /Card.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:11.723
+!MESSAGE begin problem for /Opponent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:11.723
+!MESSAGE 2 problems reported for /Opponent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:11.724
+!MESSAGE Validated 2. Took 28 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:22.356
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:22.417
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:22.843
+!MESSAGE begin problem for /Card.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:22.844
+!MESSAGE 1 problems reported for /Card.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:22.858
+!MESSAGE begin problem for /Opponent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:22.858
+!MESSAGE 3 problems reported for /Opponent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:22.858
+!MESSAGE Validated 2. Took 36 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:23.260
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:23.326
+!MESSAGE Reconciled 1. Took 2 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:23.748
+!MESSAGE begin problem for /Card.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:23.748
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:23.749
+!MESSAGE 1 problems reported for /Card.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:23.758
+!MESSAGE begin problem for /Opponent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:23.758
+!MESSAGE 2 problems reported for /Opponent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:23.758
+!MESSAGE Validated 2. Took 26 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:23.764
+!MESSAGE Reconciled 1. Took 2 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:23.880
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:23.881
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:23.886
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:23.888
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:24.285
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:24.289
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:24.294
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:24.296
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:24.715
+!MESSAGE begin problem for /Card.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:24.716
+!MESSAGE 1 problems reported for /Card.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:24.731
+!MESSAGE begin problem for /Opponent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:24.731
+!MESSAGE 2 problems reported for /Opponent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:24.731
+!MESSAGE Validated 2. Took 32 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:24.845
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:24.847
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:24.851
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:24.852
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:24.998
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:25.005
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:25.427
+!MESSAGE begin problem for /Card.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:25.427
+!MESSAGE 1 problems reported for /Card.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:25.442
+!MESSAGE begin problem for /Opponent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:25.443
+!MESSAGE 2 problems reported for /Opponent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:25.443
+!MESSAGE Validated 2. Took 32 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:25.729
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:25.738
+!MESSAGE Reconciled 1. Took 2 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:26.162
+!MESSAGE begin problem for /Card.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:26.163
+!MESSAGE 1 problems reported for /Card.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:26.177
+!MESSAGE begin problem for /Opponent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:26.177
+!MESSAGE 2 problems reported for /Opponent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:26.177
+!MESSAGE Validated 2. Took 33 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:26.231
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:26.232
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:26.234
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:26.236
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:26.654
+!MESSAGE begin problem for /Card.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:26.655
+!MESSAGE 1 problems reported for /Card.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:26.669
+!MESSAGE begin problem for /Opponent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:26.669
+!MESSAGE 2 problems reported for /Opponent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:26.670
+!MESSAGE Validated 2. Took 30 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:27.106
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:27.111
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:27.112
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:27.117
+!MESSAGE Reconciled 1. Took 3 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:27.537
+!MESSAGE begin problem for /Card.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:27.538
+!MESSAGE 1 problems reported for /Card.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:27.551
+!MESSAGE begin problem for /Opponent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:27.551
+!MESSAGE 2 problems reported for /Opponent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:27.552
+!MESSAGE Validated 2. Took 29 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:27.983
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:27.987
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:27.992
+!MESSAGE Reconciled 1. Took 2 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:27.994
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:28.263
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:28.273
+!MESSAGE Reconciled 1. Took 2 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:28.384
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:28.386
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:28.387
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:28.444
+!MESSAGE Reconciled 1. Took 2 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:28.865
+!MESSAGE begin problem for /Card.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:28.865
+!MESSAGE 1 problems reported for /Card.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:28.880
+!MESSAGE begin problem for /Opponent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:28.880
+!MESSAGE 2 problems reported for /Opponent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:28.880
+!MESSAGE Validated 2. Took 31 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:30.236
+!MESSAGE >> document/documentSymbol
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:31.644
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:31.654
+!MESSAGE Reconciled 1. Took 3 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:31.733
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:31.735
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:31.735
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:31.740
+!MESSAGE Reconciled 1. Took 2 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:32.158
+!MESSAGE begin problem for /Card.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:32.158
+!MESSAGE 1 problems reported for /Card.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:32.171
+!MESSAGE begin problem for /Opponent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:32.171
+!MESSAGE 4 problems reported for /Opponent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:32.171
+!MESSAGE Validated 2. Took 26 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:32.297
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:32.299
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:32.303
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:32.322
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:32.373
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:32.375
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:32.379
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:32.392
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:32.502
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:32.503
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:32.518
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:32.562
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:32.947
+!MESSAGE >> document/documentSymbol
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:32.972
+!MESSAGE begin problem for /Card.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:32.972
+!MESSAGE 1 problems reported for /Card.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:32.983
+!MESSAGE begin problem for /Opponent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:32.983
+!MESSAGE 2 problems reported for /Opponent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:32.983
+!MESSAGE Validated 2. Took 20 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:33.461
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:33.523
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:33.814
+!MESSAGE >> document/documentSymbol
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:33.936
+!MESSAGE begin problem for /Card.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:33.936
+!MESSAGE 1 problems reported for /Card.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:33.947
+!MESSAGE begin problem for /Opponent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:33.947
+!MESSAGE 1 problems reported for /Opponent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:33.947
+!MESSAGE Validated 2. Took 19 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:34.571
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:34.580
+!MESSAGE Reconciled 1. Took 2 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:34.849
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:34.852
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:34.858
+!MESSAGE Reconciled 1. Took 2 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:34.885
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:35.186
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:35.190
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:35.219
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:35.249
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:35.281
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:35.282
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:35.291
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:35.342
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:35.431
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:35.437
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:35.582
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:35.588
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:35.609
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:35.611
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:35.615
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:35.616
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:35.807
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:35.813
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:35.957
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:35.963
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:36.061
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:36.062
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:36.067
+!MESSAGE Reconciled 1. Took 0 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:36.069
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:36.486
+!MESSAGE begin problem for /Card.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:36.486
+!MESSAGE 1 problems reported for /Card.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:36.496
+!MESSAGE begin problem for /Opponent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:36.496
+!MESSAGE 1 problems reported for /Opponent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:36.497
+!MESSAGE Validated 2. Took 26 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:36.618
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:36.624
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:36.767
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:36.773
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:36.917
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:36.975
+!MESSAGE Reconciled 1. Took 2 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:37.068
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:37.128
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:37.285
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:37.295
+!MESSAGE Reconciled 1. Took 2 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:37.436
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:37.445
+!MESSAGE Reconciled 1. Took 2 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:37.863
+!MESSAGE begin problem for /Card.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:37.863
+!MESSAGE 1 problems reported for /Card.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:37.874
+!MESSAGE begin problem for /Opponent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:37.874
+!MESSAGE 2 problems reported for /Opponent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:37.874
+!MESSAGE Validated 2. Took 24 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:38.593
+!MESSAGE >> document/documentSymbol
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:39.246
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:39.308
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:39.628
+!MESSAGE >> document/documentSymbol
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:39.719
+!MESSAGE begin problem for /Card.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:39.720
+!MESSAGE 1 problems reported for /Card.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:39.729
+!MESSAGE begin problem for /Opponent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:39.729
+!MESSAGE 1 problems reported for /Opponent.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:39.729
+!MESSAGE Validated 2. Took 18 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:41.015
+!MESSAGE >> document/didSave
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:27:45.061
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:28:22.091
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:28:59.842
+!MESSAGE >> shutdown
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:28:59.864
+!MESSAGE >> exit
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:28:59.864
+!MESSAGE Shutdown received... waking up main thread
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-25 12:28:59.867
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is stopping:

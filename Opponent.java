@@ -1,12 +1,15 @@
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Opponent extends Player {
     ArrayList<String> playerNeeds;
+    private int age;
 
     public Opponent(boolean isTurn, Scanner scnr) {
         super(isTurn, scnr);
         this.playerNeeds = new ArrayList<String>();
+        this.age = 0;
     }
 
     public ArrayList<Card> checkHandFor(String rank) {
@@ -23,20 +26,14 @@ public class Opponent extends Player {
     }  
 
     public void playTurn(Game game) {
-        // first check if opponent has anything the player needs
-        String highPriority = checkPlayerNeeded();
-        // find which ranks opponent has the most 
-        ArrayList<String> multiples = findMostCommonRanks();
-        // find highest priority
-        String highestPriority = "";
-        if (multiples.size() == 0) {
-            highestPriority = findHighestPriorityAsk(highPriority, multiples);
-        }else {
-            highestPriority = this.hand.get(0).getName();
+        System.out.println("======================");
+        //displayHand();
+        for (String str : this.playerNeeds) {
+            System.out.printf("%s, ", str);
         }
-
-        String desired = highestPriority;
-        System.out.printf("HIGHEST PRIORITY IS: %s\n", highestPriority);
+        System.out.println();
+        System.out.println("======================");
+        String desired = whatToAskFor();
         while (true) {
             System.out.printf("Do you have any %s's? (y/n)\n", desired);
             String answer = super.scnr.nextLine();
@@ -64,43 +61,58 @@ public class Opponent extends Player {
         }
     }
 
-    public String findHighestPriorityAsk(String string, ArrayList<String> multiples) {
-        for (String str : multiples) {
-            if (string.equals(str)) {
-                return string;
+    public String whatToAskFor() {
+        // checks for books
+        ArrayList<String> books = getBooks();
+        // System.out.println(books.get(0));
+        Random rnd = new Random();
+        int index = rnd.nextInt(0, this.hand.size()-1);
+        // System.out.printf("index: %d\n", index);
+        String retVal = this.hand.get(index).getName();
+        // else ask for book card
+        if (books.size() > 0) {
+            retVal = books.get(0);
+        }
+        // check what player needs
+        if (this.playerNeeds.size() > 0) {
+            String pNeeds = this.playerNeeds.get(0);
+            for (Card card : super.hand) {
+                if (card.getName().equals(pNeeds)) {
+                    retVal = pNeeds;
+                    break;
+                }
             }
         }
-        return multiples.get(0);
+        // remove last element from playerNeeds if age == 3
+        if (this.age == 3) {
+            if (this.playerNeeds.size() > 0) {
+                this.playerNeeds.remove(this.playerNeeds.size()-1);
+            }
+            this.age = 0;
+        }else {
+            this.age++;
+        }
+        return retVal;
     }
 
-    public String checkPlayerNeeded() {
-        ArrayList<String> highPriority = new ArrayList<String>();
-        for (String needs: this.playerNeeds) {
-            for (Card card : this.hand) {
-                if (card.getName().equals(needs)) {
-                    highPriority.add(needs);
-                }
-            }
-        }
-        return highPriority.get(0);
-   }
-
-   public void addToNeeds(String rank) {
-       this.playerNeeds.add(rank);
-   }
-
     // find which ranks opponent has the most 
-    public ArrayList<String> findMostCommonRanks() {
-        ArrayList<Card> temp = super.hand;
-        ArrayList<String> multiples = new ArrayList<String>(); 
-        for (Card card : temp) {
-            for (Card c : temp) {
-                if (card.getName().equals(c.getName()) && !multiples.contains(card.getName())) {
-                    multiples.add(card.getName());
-                }
-            }
+    public ArrayList<String> getBooks() {
+        String[] ranks = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"};
+        ArrayList<String> currRanks = new ArrayList<String>();
+        ArrayList<String> books = new ArrayList<String>(); 
+        for (Card card : this.hand) { currRanks.add(card.getName()); }
+
+        for (String rank : ranks) {
+            if (currRanks.indexOf(rank) != currRanks.lastIndexOf(rank)) {
+                books.add(rank);
+            } 
         }
-        return multiples;
+
+        return books;
+    }
+
+    public void addToNeeds(String rank) {
+       this.playerNeeds.add(rank);
     }
 
     // checks if player is not lying about what cards they have in their hand
