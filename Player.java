@@ -4,11 +4,12 @@ import java.util.Map;
 import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 
-public class Player {
+public class Player extends Deck{
     ArrayList<Card> hand;
     int points;
     boolean isPlayersTurn;
     Scanner scnr;
+    Game game;
 
     public Player(boolean isPlayersTurn, Scanner scnr) {
         hand = new ArrayList<Card>();
@@ -145,7 +146,10 @@ public class Player {
         return this.points;
     }
 
-    public static int getRandomNumber(int min, int max) {
+    public int getRandomNumber(int min, int max) {
+        if (min > max || this.hand.size() == 1) {
+            return 0;
+        }
         int randomNum = ThreadLocalRandom.current().nextInt(min, max + 1);
         return randomNum;
     }

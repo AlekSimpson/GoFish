@@ -35,7 +35,7 @@ public class Main {
         Deck deck = new Deck();
         Player player = new Player(true, scnr);
         Opponent opponent = new Opponent(false, scnr);
-        Game game = new Game(player, opponent, deck);
+        Game game = new Game(player, opponent, deck, debug);
         // deal players in 
         dealPlayersIn(player, opponent, deck);
 

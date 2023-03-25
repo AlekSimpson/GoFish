@@ -1,14 +1,18 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import javax.swing.plaf.DesktopIconUI;
+
 public class Opponent extends Player {
     ArrayList<String> playerNeeds;
     ArrayList<String> books;
+    String previouslyAskedFor;
 
     public Opponent(boolean isTurn, Scanner scnr) {
         super(isTurn, scnr);
         this.playerNeeds = new ArrayList<String>();
         this.books = new ArrayList<String>();
+        this.previouslyAskedFor = "";
     }
 
     public ArrayList<Card> checkHandFor(String rank) {
@@ -25,41 +29,45 @@ public class Opponent extends Player {
     }  
 
     public void playTurn(Game game) {
-        System.out.println("========================");
-        displayHand();
-        System.out.println("========================");
+        presentDebugLog(); 
         // first check if opponent has anything the player needs
-        String playerNeeds = checkPlayerNeeded();
+        String playerNeed = checkPlayerNeeded();
         // find which ranks opponent has the most 
         getBooks();
         // find highest priority
         String desired = "";
         int randInt = getRandomNumber(0, 100);
-        if ((this.books.size() > 0) && (randInt >= 60)) {
+        if ((this.books.size() > 0) && (randInt >= 70)) {
             System.out.println("[CHOOSING FIRST FROM BOOKS]");
             desired = this.books.get(0);
+        }else if (this.hand.size() > 0) {
+            desired = chooseRandomCard();
         }else {
-            int randomIdx = getRandomNumber(0, this.hand.size()-1);
-            System.out.printf("[CHOOSING RANDOM CARD, idx: %d]\n", randomIdx);
-            desired = this.hand.get(randomIdx).getName();
+            System.out.printf("[DRAWING BECAUSE] : ");
+            super.draw(super.getDeck());
         }
         // checks if opponent can ask for card player previously asked for
         boolean askedPlayerNeed = false;
         for (Card card : this.hand) {
-            if (card.getName().equals(playerNeeds)) { 
-                System.out.println("[CHOOSING FROM PLAYER NEEDS]");
-                desired = playerNeeds;
+            if (card.getName().equals(playerNeed)) { 
+                desired = playerNeed;
                 askedPlayerNeed = true;
+                System.out.println("[CHOOSING FROM PLAYER NEEDS]");
+                System.out.println(askedPlayerNeed);
                 break; 
             }
         }
 
+        // checks if opponent is cheating
         boolean oppCheating = true;
         for (Card card : this.hand)  {
             if (card.getName().equals(desired)) {
                 oppCheating = false;
                 break;
             }
+        }
+        if (oppCheating || this.previouslyAskedFor == desired) {
+            desired = chooseRandomCard();
         }
 
         while (true) {
@@ -78,9 +86,9 @@ public class Opponent extends Player {
             if (answer.toUpperCase().equals("Y")) {
                 // search for desired card and move it to opponents hand
                 moveCards(game.getPlayer().getHand(), super.hand, desired);
-                if (askedPlayerNeed) { 
-                    System.out.println("IS UPDATING PLAYER NEEDS");
-                    this.playerNeeds.remove(0); 
+                if (desired == playerNeed) {
+                    System.out.println("GETTING HERE");
+                    this.playerNeeds.remove(playerNeed);
                 }
             }else if (answer.toUpperCase().equals("N")) {
                 super.draw(game.getDeck(), false);
@@ -90,6 +98,7 @@ public class Opponent extends Player {
             }
             break;
         }
+        this.previouslyAskedFor = desired;
         updateBookPosition();
     }
 
@@ -123,8 +132,19 @@ public class Opponent extends Player {
         for (String rank : ranks) {
             int firstIdx = currRanks.indexOf(rank);
             int secondIdx = currRanks.lastIndexOf(rank);
+
+            // if firstIdx and secondIdx don't match it means there is at least two of the same
             if (firstIdx != secondIdx) {
-                this.books.add(rank);
+                // dont want to have the same rank twice in the books array
+                if (!this.books.contains(rank)) {
+                    this.books.add(rank);
+                }
+            }else {
+                // previously had book was either stolen or lost from the hand somehow during the game
+                // if that happens then the books array needs to update to reflect that
+                if (this.books.contains(rank)) {
+                    this.books.remove(rank);
+                }
             }
         }
     }
@@ -133,6 +153,26 @@ public class Opponent extends Player {
             this.playerNeeds.add(rank);
         }
     }
+
+    // picks a random card from the deck
+    public String chooseRandomCard() {
+        String desired = "";
+
+        if (this.hand.size() == 1) {
+            return this.hand.get(0).getName();
+        }
+
+        while (true) {
+            int randomIdx = getRandomNumber(0, this.hand.size()-1);
+            System.out.printf("[CHOOSING RANDOM CARD, idx: %d]\n", randomIdx);
+            desired = this.hand.get(randomIdx).getName();
+            if (!desired.equals(this.previouslyAskedFor)) {
+                break;
+            }    
+        }
+        return desired;
+    }
+
     // checks if player is not lying about what cards they have in their hand
     public boolean playerIsLying(String desired, Player pl, boolean playerSaidNo) {
         // ask for card x -> pl says no  -> we expect no card x's in pl.hand
@@ -157,5 +197,23 @@ public class Opponent extends Player {
         }
 
         return retVal;
+    }
+
+    public void presentDebugLog() {
+        if (this.game.debug) {
+            System.out.println("========================");
+            displayHand();
+            System.out.print("playerNeeds: ");
+            for (String str : this.playerNeeds) {
+                System.out.printf("%s, ", str);
+            }
+            System.out.println();
+            System.out.print("books: ");
+            for (String book : this.books) {
+                System.out.printf("%s, ", book);
+            }
+            System.out.println();
+            System.out.println("========================");
+        }
     }
 }
