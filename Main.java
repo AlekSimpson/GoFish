@@ -2,8 +2,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
-    static boolean debug = false;
-    public static void main(String[] args) {
+        public static void main(String[] args) {
         Scanner scnr = new Scanner(System.in);
         gameloop(scnr);
         scnr.close();
@@ -31,11 +30,14 @@ public class Main {
     }
 
     public static void startGame(Scanner scnr) {
+        boolean debug = false;
         // init objects
         Deck deck = new Deck();
         Player player = new Player(true, scnr);
         Opponent opponent = new Opponent(false, scnr);
         Game game = new Game(player, opponent, deck, debug);
+        player.setGame(game);
+        opponent.setGame(game);
         // deal players in 
         dealPlayersIn(player, opponent, deck);
 
@@ -73,6 +75,16 @@ public class Main {
                 whosTurn = "Your";
                 clearScreen();
             }
+        }
+
+    }
+
+    public void displayGameResults(Game game) {
+        boolean playerWon = game.getPlayer().getPoints() > game.getOpponent().getPoints();
+        if (playerWon) {
+            System.out.println("You won!");
+        }else {
+            System.out.println("You lost! Better luck next time.");
         }
     }
 
@@ -126,7 +138,7 @@ public class Main {
     }
 
     public static void printTopBar(Game game, String whosTurn) {
-        if (debug) {
+        if (game.debug) {
             System.out.println("[DEBUG INFO]");
             System.out.printf("Player hand count: %d\n", game.getPlayer().getHand().size());
             System.out.printf("Opponent hand count: %d\n", game.getOpponent().getHand().size());

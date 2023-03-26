@@ -44,7 +44,7 @@ public class Opponent extends Player {
             desired = chooseRandomCard();
         }else {
             System.out.printf("[DRAWING BECAUSE] : ");
-            super.draw(super.getDeck());
+            super.draw(game.getDeck(), true);
         }
         // checks if opponent can ask for card player previously asked for
         boolean askedPlayerNeed = false;
@@ -68,6 +68,8 @@ public class Opponent extends Player {
         }
         if (oppCheating || this.previouslyAskedFor == desired) {
             desired = chooseRandomCard();
+        }else if (this.previouslyAskedFor == desired && this.hand.size() == 1) {
+            desired = this.hand.get(0);
         }
 
         while (true) {
@@ -166,7 +168,7 @@ public class Opponent extends Player {
             int randomIdx = getRandomNumber(0, this.hand.size()-1);
             System.out.printf("[CHOOSING RANDOM CARD, idx: %d]\n", randomIdx);
             desired = this.hand.get(randomIdx).getName();
-            if (!desired.equals(this.previouslyAskedFor)) {
+            if (!desired.equals(this.previouslyAskedFor) || this.hand.size() <= 1) {
                 break;
             }    
         }
@@ -200,7 +202,7 @@ public class Opponent extends Player {
     }
 
     public void presentDebugLog() {
-        if (this.game.debug) {
+        if (super.game.getDebug()) {
             System.out.println("========================");
             displayHand();
             System.out.print("playerNeeds: ");

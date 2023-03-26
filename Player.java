@@ -4,7 +4,7 @@ import java.util.Map;
 import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 
-public class Player extends Deck{
+public class Player {
     ArrayList<Card> hand;
     int points;
     boolean isPlayersTurn;
@@ -19,13 +19,18 @@ public class Player extends Deck{
 
     public void draw(Deck deck, boolean verbose) {
         Card card = deck.draw();
-        if (verbose)
-        System.out.printf("[DREW %s of %s]\n", card.getName(), card.getSuit());
-        hand.add(card);
+        if (verbose) {
+            System.out.printf("[DREW %s of %s]\n", card.getName(), card.getSuit());
+        }
+        this.hand.add(card);
     }
 
     public ArrayList<Card> getHand() {
         return this.hand;
+    }
+
+    public void setGame(Game game) {
+        this.game = game;
     }
 
     public void displayHand() {
