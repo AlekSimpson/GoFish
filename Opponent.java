@@ -69,10 +69,14 @@ public class Opponent extends Player {
         if (oppCheating || this.previouslyAskedFor == desired) {
             desired = chooseRandomCard();
         }else if (this.previouslyAskedFor == desired && this.hand.size() == 1) {
-            desired = this.hand.get(0);
+            desired = this.hand.get(0).getName();
         }
 
         while (true) {
+            if (this.game.getPlayer().getHand().size() == 0) {
+                System.out.println("PLAYER DRAWING BECAUSE OUT OF CARDS 2");
+                this.game.getPlayer().draw(this.game.getDeck(), true);
+            }
             System.out.printf("Do you have any %s's? (y/n)\n", desired);
             String answer = super.scnr.nextLine();
 
@@ -164,14 +168,18 @@ public class Opponent extends Player {
             return this.hand.get(0).getName();
         }
 
+        int max = 5;
+        int i = 0;
         while (true) {
             int randomIdx = getRandomNumber(0, this.hand.size()-1);
             System.out.printf("[CHOOSING RANDOM CARD, idx: %d]\n", randomIdx);
             desired = this.hand.get(randomIdx).getName();
-            if (!desired.equals(this.previouslyAskedFor) || this.hand.size() <= 1) {
+            if (!desired.equals(this.previouslyAskedFor) || this.hand.size() <= 3 || i == max) {
                 break;
             }    
+            i++;
         }
+        System.out.println("***********************************[BREAK CHOOSE RANDOM]*****************************************8");
         return desired;
     }
 

@@ -2,14 +2,14 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
-        public static void main(String[] args) {
+    public static void main(String[] args) {
         Scanner scnr = new Scanner(System.in);
+        clearScreen();
         gameloop(scnr);
         scnr.close();
     }
 
     public static void gameloop(Scanner scnr) {
-        clearScreen();
         while (true)  {
             System.out.println("--------------------------------------");
             System.out.println("Would you like to play a game or exit?");
@@ -43,7 +43,7 @@ public class Main {
 
         String rank = "ERROR";
         String whosTurn = "Your";
-        while (checkGameState(deck)) {
+        while (checkGameState(game)) {
             printTopBar(game, whosTurn);
 
             if (player.isPlayersTurn) {
@@ -79,7 +79,7 @@ public class Main {
 
     }
 
-    public void displayGameResults(Game game) {
+    public static void displayGameResults(Game game) {
         boolean playerWon = game.getPlayer().getPoints() > game.getOpponent().getPoints();
         if (playerWon) {
             System.out.println("You won!");
@@ -112,8 +112,10 @@ public class Main {
     } 
 
     // checks to see if the game should end yet
-    public static boolean checkGameState(Deck deck) {
-        if (deck.getStackCount() == 0) {
+    public static boolean checkGameState(Game game) {
+        if (game.getDeck().getStackCount() == 0 && game.getPlayer().getHandSize() == 0) {
+            System.out.println("[GAME ENDED]");
+            displayGameResults(game);
             return false;
         }
         return true;

@@ -29,11 +29,19 @@ public class Player {
         return this.hand;
     }
 
+    public int getHandSize() {
+        return this.hand.size();
+    }
+
     public void setGame(Game game) {
         this.game = game;
     }
 
     public void displayHand() {
+        if (this.hand.size() == 0) {
+            System.out.println("--------DRAWING BECAUSE OUT OF CARDS-------------");
+            draw(this.game.getDeck(), true);
+        }
         //make sublists
         ArrayList<ArrayList<Card>> rows = new ArrayList<ArrayList<Card>>();
 
