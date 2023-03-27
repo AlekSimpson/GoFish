@@ -30023,3 +30023,18 @@ BootLoader constants: OS=macosx, ARCH=aarch64, WS=cocoa, NL=en_US
 
 !ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-26 15:29:34.369
 !MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-26 17:41:55.400
+!MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-27 00:44:28.717
+!MESSAGE >> shutdown
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-27 00:44:28.729
+!MESSAGE >> exit
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-27 00:44:28.744
+!MESSAGE Shutdown received... waking up main thread
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-03-27 00:44:28.749
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is stopping:
