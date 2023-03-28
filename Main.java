@@ -23,7 +23,7 @@ public class Main {
                 break;
             }else if  (answer.toUpperCase().equals("P")) {
                 startGame(scnr);
-            }else {
+           }else {
                 System.out.println("That is not a valid option. Please try again.");
             }
         }
@@ -43,8 +43,13 @@ public class Main {
 
         String rank = "ERROR";
         String whosTurn = "Your";
+        int tick = 0;
+        int handsize = player.getHandSize();
         while (checkGameState(game)) {
-            printTopBar(game, whosTurn);
+            if (tick % 2 == 0) {
+                handsize = player.getHandSize();
+            }
+            printTopBar(game, whosTurn, handsize);
 
             if (player.isPlayersTurn) {
                player.displayHand();
@@ -75,8 +80,8 @@ public class Main {
                 whosTurn = "Your";
                 clearScreen();
             }
+            tick++;
         }
-
     }
 
     public static void displayGameResults(Game game) {
@@ -139,23 +144,21 @@ public class Main {
         }
     }
 
-    public static void printTopBar(Game game, String whosTurn) {
+    public static void printTopBar(Game game, String whosTurn, int handSize) {
         if (game.debug) {
             System.out.println("[DEBUG INFO]");
             System.out.printf("Player hand count: %d\n", game.getPlayer().getHand().size());
             System.out.printf("Opponent hand count: %d\n", game.getOpponent().getHand().size());
             System.out.printf("Amount left in deck: %d", game.getDeck().getStackCount());
         }
-        int size = (game.getPlayer().getHand().size() >= 10) ? 10 : game.getPlayer().getHand().size();
-        int entireLength = (size * 7) + ((size + 1)*1);
-        // int textLength = (player.isPlayersTurn) ? 11 : 15;
-        int textLength = (game.getPlayer().isPlayersTurn) ? 29 : 37;
+        int size = (handSize >= 10) ? 10 : handSize;
+        int entireLength = (size * 7) + (3*(size + 1));
+        int textLength = (game.getPlayer().isPlayersTurn) ? 46 : 54;//46 : 54, 29 : 37
 
-        int length = (entireLength - textLength)/2;
-        length++;
+        int length = ((entireLength - textLength)/2)+1;
         for (int i = 0; i < length; i++) { System.out.print("-"); }
         int points = (whosTurn.equals("Your")) ? game.getPlayer().getPoints() : game.getOpponent().getPoints();
-        System.out.printf(" %s turn | %s points: %d | %d left in deck", whosTurn, whosTurn, points, game.getDeck().getDeckSize());
+        System.out.printf(" %s turn | %s points: %d | %d left in deck ", whosTurn, whosTurn, points, game.getDeck().getDeckSize());
         for (int i = 0; i < length; i++) { System.out.print("-"); }
         System.out.println();
     }

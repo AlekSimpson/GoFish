@@ -18,22 +18,33 @@
 		<link>
 			<name>src/Game.java</name>
 			<type>1</type>
-			<location>//Users/aleksimpson/Desktop/projects/GoFish/Game.java</location>
+			<location>/Users/aleksimpson/Desktop/projects/GoFish/Game.java</location>
 		</link>
 		<link>
 			<name>src/Main.java</name>
 			<type>1</type>
-			<location>//Users/aleksimpson/Desktop/projects/GoFish/Main.java</location>
+			<location>/Users/aleksimpson/Desktop/projects/GoFish/Main.java</location>
 		</link>
 		<link>
 			<name>src/Opponent.java</name>
 			<type>1</type>
-			<location>//Users/aleksimpson/Desktop/projects/GoFish/Opponent.java</location>
+			<location>/Users/aleksimpson/Desktop/projects/GoFish/Opponent.java</location>
 		</link>
 		<link>
 			<name>src/Player.java</name>
 			<type>1</type>
-			<location>//Users/aleksimpson/Desktop/projects/GoFish/Player.java</location>
+			<location>/Users/aleksimpson/Desktop/projects/GoFish/Player.java</location>
 		</link>
 	</linkedResources>
+	<filteredResources>
+		<filter>
+			<id>1679971724515</id>
+			<name></name>
+			<type>30</type>
+			<matcher>
+				<id>org.eclipse.core.resources.regexFilterMatcher</id>
+				<arguments>node_modules|\.git|__CREATED_BY_JAVA_LANGUAGE_SERVER__</arguments>
+			</matcher>
+		</filter>
+	</filteredResources>
 </projectDescription>

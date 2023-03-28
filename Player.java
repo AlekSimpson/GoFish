@@ -38,8 +38,8 @@ public class Player {
     }
 
     public void displayHand() {
+        // checks to see if player ran out of cards, and draws if they are
         if (this.hand.size() == 0) {
-            System.out.println("--------DRAWING BECAUSE OUT OF CARDS-------------");
             draw(this.game.getDeck(), true);
         }
         //make sublists
@@ -68,9 +68,8 @@ public class Player {
         for (ArrayList<Card> row : rows) {
             makeRow(row);
         }
-
         int size = (this.hand.size() >= 10) ? 10 : this.hand.size();
-        int entireLength = (size * 7) + ((size + 1)*1);
+        int entireLength = (size * 7) + (3*(size + 1))+1;
         for (int i = 0; i < entireLength; i++) { System.out.print("-"); }
         System.out.println();
     }
@@ -82,9 +81,9 @@ public class Player {
          * |____K|
          */
 
-        System.out.println(make(row, " |%s---|", " |%s----|"));
+        System.out.println(make(row, "   |%s---|", "   |%s----|"));
         System.out.println(makeMiddle(row));
-        System.out.println(make(row, " |___%s|", " |____%s|"));
+        System.out.println(make(row, "   |___%s|", "   |____%s|"));
     }
 
     public String make(ArrayList<Card> cards, String formOne, String formTwo) {
@@ -102,7 +101,7 @@ public class Player {
         String total = "";
 
         for (Card card : cards) {
-            String str = String.format(" |  %s  |", suitsUnicode.get(card.getSuit()));
+            String str = String.format("   |  %s  |", suitsUnicode.get(card.getSuit()));
             total+=str;
         }
 

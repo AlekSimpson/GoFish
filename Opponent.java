@@ -1,8 +1,6 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import javax.swing.plaf.DesktopIconUI;
-
 public class Opponent extends Player {
     ArrayList<String> playerNeeds;
     ArrayList<String> books;
@@ -38,12 +36,10 @@ public class Opponent extends Player {
         String desired = "";
         int randInt = getRandomNumber(0, 100);
         if ((this.books.size() > 0) && (randInt >= 70)) {
-            System.out.println("[CHOOSING FIRST FROM BOOKS]");
             desired = this.books.get(0);
         }else if (this.hand.size() > 0) {
             desired = chooseRandomCard();
         }else {
-            System.out.printf("[DRAWING BECAUSE] : ");
             super.draw(game.getDeck(), true);
         }
         // checks if opponent can ask for card player previously asked for
@@ -52,7 +48,6 @@ public class Opponent extends Player {
             if (card.getName().equals(playerNeed)) { 
                 desired = playerNeed;
                 askedPlayerNeed = true;
-                System.out.println("[CHOOSING FROM PLAYER NEEDS]");
                 System.out.println(askedPlayerNeed);
                 break; 
             }
@@ -74,7 +69,6 @@ public class Opponent extends Player {
 
         while (true) {
             if (this.game.getPlayer().getHand().size() == 0) {
-                System.out.println("PLAYER DRAWING BECAUSE OUT OF CARDS 2");
                 this.game.getPlayer().draw(this.game.getDeck(), true);
             }
             System.out.printf("Do you have any %s's? (y/n)\n", desired);
@@ -93,7 +87,6 @@ public class Opponent extends Player {
                 // search for desired card and move it to opponents hand
                 moveCards(game.getPlayer().getHand(), super.hand, desired);
                 if (desired == playerNeed) {
-                    System.out.println("GETTING HERE");
                     this.playerNeeds.remove(playerNeed);
                 }
             }else if (answer.toUpperCase().equals("N")) {
@@ -172,14 +165,12 @@ public class Opponent extends Player {
         int i = 0;
         while (true) {
             int randomIdx = getRandomNumber(0, this.hand.size()-1);
-            System.out.printf("[CHOOSING RANDOM CARD, idx: %d]\n", randomIdx);
             desired = this.hand.get(randomIdx).getName();
             if (!desired.equals(this.previouslyAskedFor) || this.hand.size() <= 3 || i == max) {
                 break;
             }    
             i++;
         }
-        System.out.println("***********************************[BREAK CHOOSE RANDOM]*****************************************8");
         return desired;
     }
 
