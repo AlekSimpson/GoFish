@@ -11,10 +11,12 @@ public class Main {
 
     public static void gameloop(Scanner scnr) {
         while (true)  {
-            System.out.println("--------------------------------------");
-            System.out.println("Would you like to play a game or exit?");
-            System.out.println("press p to play");
-            System.out.println("press q to quit");
+            System.out.println("---------------------------------------");
+            System.out.println("          Welcome to Go Fish!          ");
+            System.out.println("[ p ] - to play");
+            System.out.println("[ q ] - to quit");
+            System.out.println();
+            System.out.print("> ");
             String answer = scnr.nextLine();
 
             clearScreen();
@@ -86,17 +88,20 @@ public class Main {
 
     public static void displayGameResults(Game game) {
         boolean playerWon = game.getPlayer().getPoints() > game.getOpponent().getPoints();
+        clearScreen();
         if (playerWon) {
             System.out.println("You won!");
         }else {
             System.out.println("You lost! Better luck next time.");
         }
+
     }
 
     public static String getPlayerRequestedRank(Scanner scnr, Player player) {
         String rank = "";
         while (true) {
             System.out.println("Do you have any...? (type desired rank)");
+            System.out.print("> ");
             rank = scnr.nextLine();
             if (!isValidRankToAskFor(player, rank)) {
                 System.out.println("You cannot ask for a rank that you do not have in your hand.\nTry again.");

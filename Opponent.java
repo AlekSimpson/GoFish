@@ -42,16 +42,6 @@ public class Opponent extends Player {
         }else {
             super.draw(game.getDeck(), true);
         }
-        // checks if opponent can ask for card player previously asked for
-        boolean askedPlayerNeed = false;
-        for (Card card : this.hand) {
-            if (card.getName().equals(playerNeed)) { 
-                desired = playerNeed;
-                askedPlayerNeed = true;
-                System.out.println(askedPlayerNeed);
-                break; 
-            }
-        }
 
         // checks if opponent is cheating
         boolean oppCheating = true;
@@ -72,6 +62,7 @@ public class Opponent extends Player {
                 this.game.getPlayer().draw(this.game.getDeck(), true);
             }
             System.out.printf("Do you have any %s's? (y/n)\n", desired);
+            System.out.print("> ");
             String answer = super.scnr.nextLine();
 
             // this checks if the player is lying
