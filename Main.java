@@ -1,20 +1,31 @@
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
         Scanner scnr = new Scanner(System.in);
         clearScreen();
         gameloop(scnr);
         scnr.close();
     }
 
-    public static void gameloop(Scanner scnr) {
+    public static void gameloop(Scanner scnr) throws FileNotFoundException {
+        File art = new File("art.txt");
+        Scanner fileReader = new Scanner(art);
+        while (fileReader.hasNextLine()) {
+            String line = fileReader.nextLine();
+            System.out.println(line);
+        }
+        System.out.println();
+        fileReader.close();
         while (true)  {
-            System.out.println("---------------------------------------");
-            System.out.println("          Welcome to Go Fish!          ");
-            System.out.println("[ p ] - to play");
-            System.out.println("[ q ] - to quit");
+            for (int i = 0; i < 136; i++) { System.out.print("-"); }
+            System.out.print("\n\n");
+            System.out.printf("%60s\n\n", "Welcome to Go Fish!");
+            System.out.printf("%58s\n", "[ p ] - to play");
+            System.out.printf("%58s\n", "[ q ] - to quit");
             System.out.println();
             System.out.print("> ");
             String answer = scnr.nextLine();
@@ -31,7 +42,7 @@ public class Main {
         }
     }
 
-    public static void startGame(Scanner scnr) {
+    public static void startGame(Scanner scnr) throws FileNotFoundException {
         boolean debug = false;
         // init objects
         Deck deck = new Deck();
@@ -86,15 +97,18 @@ public class Main {
         }
     }
 
-    public static void displayGameResults(Game game) {
+    public static void displayGameResults(Game game) throws FileNotFoundException {
         boolean playerWon = game.getPlayer().getPoints() > game.getOpponent().getPoints();
+        File lost = new File("lost.txt");
+        File won = new File("won.txt");
+        File fn = (playerWon) ? won : lost;
+        Scanner fileReader = new Scanner(fn);
         clearScreen();
-        if (playerWon) {
-            System.out.println("You won!");
-        }else {
-            System.out.println("You lost! Better luck next time.");
+        while (fileReader.hasNextLine()) {
+            String line = fileReader.nextLine();
+            System.out.println(line);
         }
-
+        fileReader.close();
     }
 
     public static String getPlayerRequestedRank(Scanner scnr, Player player) {
@@ -122,7 +136,7 @@ public class Main {
     } 
 
     // checks to see if the game should end yet
-    public static boolean checkGameState(Game game) {
+    public static boolean checkGameState(Game game) throws FileNotFoundException {
         if (game.getDeck().getStackCount() == 0 && game.getPlayer().getHandSize() == 0) {
             System.out.println("[GAME ENDED]");
             displayGameResults(game);
