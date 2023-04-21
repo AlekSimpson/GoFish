@@ -4,7 +4,13 @@ import java.util.Map;
 import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 
-public class Player {
+interface AbstractPlayer {
+    public void draw();
+    public int getPoints();
+    public String toString();
+}
+
+public class Player implements AbstractPlayer {
     ArrayList<Card> hand;
     int points;
     boolean isPlayersTurn;
@@ -164,5 +170,9 @@ public class Player {
         }
         int randomNum = ThreadLocalRandom.current().nextInt(min, max + 1);
         return randomNum;
+    }
+
+    public String toString() {
+        return String.format("This is a player with %d points", this.points);
     }
 }

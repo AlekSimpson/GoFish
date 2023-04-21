@@ -208,4 +208,9 @@ public class Opponent extends Player {
             System.out.println("========================");
         }
     }
+
+    @Override 
+    public String toString() {
+        return String.format("This is an opponent with %s points", this.points);
+    }
 }
